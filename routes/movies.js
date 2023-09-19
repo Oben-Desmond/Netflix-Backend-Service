@@ -6,14 +6,18 @@ router.get('/', function (req, res, next) {
     res.json({ data: netflixMovies, success: true, })
 });
 
+router.get('/', function (req, res, next) {
+    res.json({ data: trendingMovies, success: true, })
+});
+
 module.exports = router;
 
 
 const netflixMovies = [
     {
         posterURL: "https://www.liverpoolfilmoffice.tv/wp-content/uploads/2021/03/The-Irregulars-Netflix-Key-Art-Landscape-1024x629.jpg",
-        movieURL: "",
-        title: "https://youtu.be/lTE5MAGpflw?si=PDwEQ2e0lpdWixUf",
+        movieURL: "https://youtu.be/lTE5MAGpflw?si=PDwEQ2e0lpdWixUf",
+        title: "The Irregulars",
         category: "Super Hero",
         year: 2019
     },
@@ -53,13 +57,51 @@ const netflixMovies = [
         year: 2023
     }
 ];
+
+
+
 const trendingMovies = [
-    "https://wallpapercave.com/wp/wp7630987.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKLTl62LPXQyjcIw9HpMfCY7fbv2QpjM_9Y7MWeNVnXUIdyPILiovjNIa2a6t0d2DGRkk&usqp=CAU",
-    "https://vmagazine.com/wp-content/uploads/2022/04/0ce99b5b45381be1362b9f9de9bf1033.jpg",
-    "https://i.ytimg.com/vi/6oUgmSS0aZA/maxresdefault.jpg",
-    "https://www.coherentcinema.com/wp-content/uploads/2020/03/Pursuit-of-Happyness.jpg",
-    "https://external-preview.redd.it/your-thoughts-on-netflixs-new-action-movie-the-mother-v0-HBGMEQWdkCiFE9nygpzzHmiBcU0XroX_GlyAQ5G4YUA.jpg?auto=webp&s=13ece7d0f1e53ce43220b854d1e15d792d1c71b4"
+    {
+        posterURL: "https://wallpapercave.com/wp/wp7630987.jpg",
+        movieURL: "https://youtu.be/jAy6NJ_D5vU?si=ZiFvjY6r8FljfREa",
+        title: "Dare Devil",
+        category: "Action",
+        year: 2021
+    },
+    {
+        posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKLTl62LPXQyjcIw9HpMfCY7fbv2QpjM_9Y7MWeNVnXUIdyPILiovjNIa2a6t0d2DGRkk&usqp=CAU",
+        movieURL: "https://youtu.be/mmnQzRP-NZ4?si=p6vA_kTJ3xunjm-x",
+        title: "Scoop",
+        category: "Action",
+        year: 2021
+    }, {
+        posterURL: "https://vmagazine.com/wp-content/uploads/2022/04/0ce99b5b45381be1362b9f9de9bf1033.jpg",
+        movieURL: "https://youtu.be/-voLo_TIWf4?si=wUdH2rHYbAqc45V1",
+        title: "Half Time",
+        category: "Action",
+        year: 2021
+    }, {
+        posterURL: "https://i.ytimg.com/vi/6oUgmSS0aZA/maxresdefault.jpg",
+        movieURL: "https://youtu.be/1d0Zf9sXlHk?si=KqqnwFmoj_wW6DtP",
+        title: "Enola Homes",
+        category: "Action",
+        year: 2021,
+    },
+    {
+        posterURL: "https://www.coherentcinema.com/wp-content/uploads/2020/03/Pursuit-of-Happyness.jpg",
+        movieURL: "https://youtu.be/DMOBlEcRuw8?si=JYEb3KUHhpBsVDir",
+        title: "The Pursuit of Happiness",
+        category: "Action",
+        year: 2021
+    },
+    {
+        posterURL: "https://external-preview.redd.it/your-thoughts-on-netflixs-new-action-movie-the-mother-v0-HBGMEQWdkCiFE9nygpzzHmiBcU0XroX_GlyAQ5G4YUA.jpg?auto=webp&s=13ece7d0f1e53ce43220b854d1e15d792d1c71b4",
+        movieURL: "https://youtu.be/8BFdFeOS3oM?si=KwYeIQoW3FjB8WgK",
+        title: "The Mother",
+        category: "Action",
+        year: 2023
+    }
+
 ]
 
 
