@@ -6,7 +6,7 @@ router.get('/', function (req, res, next) {
     res.json({ data: netflixMovies, success: true, })
 });
 
-router.get('/', function (req, res, next) {
+router.get('/trending', function (req, res, next) {
     res.json({ data: trendingMovies, success: true, })
 });
 
