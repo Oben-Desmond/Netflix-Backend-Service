@@ -10,6 +10,14 @@ router.get('/trending', function (req, res, next) {
     res.json({ data: trendingMovies, success: true, })
 });
 
+router.get('/search', function (req, res, next) {
+    const { query } = req.query
+    console.log(req.query)
+    const allMovies = [...netflixMovies, ...trendingMovies];
+    const filteredMovies = allMovies.filter(movie => movie.title.toLowerCase().includes(query.toLowerCase()));
+    res.json({ data: filteredMovies, success: true, })
+});
+
 module.exports = router;
 
 const netflixMovies = [
